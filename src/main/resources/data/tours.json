@@ -1,0 +1,14 @@
+﻿[
+  {
+    "id": null,
+    "tourName": "Sample Tour",
+    "description": "A sample tour description.",
+    "tourType": "Adventure",
+    "durationInDays": 7,
+    "price": 1500.00,
+    "startDate": "2023-12-08T12:00:00.000000",
+    "createdAt": "2023-12-08T00:00:00.000000",
+    "modifiedAt": null,
+    "url": "https://www.example.com/sample-tour"
+  }
+]
