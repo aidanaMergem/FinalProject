@@ -4,6 +4,8 @@ import com.ead.finalproject.model.JwtAuthentication;
 import com.ead.finalproject.model.JwtRequest;
 import com.ead.finalproject.model.JwtResponse;
 import com.ead.finalproject.model.User;
+import com.ead.finalproject.repository.UserRepo;
+import com.ead.finalproject.service.UserService;
 import io.jsonwebtoken.Claims;
 import jakarta.security.auth.message.AuthException;
 import lombok.NonNull;
@@ -18,7 +20,8 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class AuthService {
 
-    private final UserService userService;
+    private final UserServiceImpl userService;
+    private final UserRepo userRepository;
     private final Map<String, String> refreshStorage = new HashMap<>();
     private final JwtProvider jwtProvider;
 

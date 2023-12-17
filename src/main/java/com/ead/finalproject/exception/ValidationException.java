@@ -1,4 +1,4 @@
-﻿package com.ead.finalproject.exception;
+package com.ead.finalproject.exception;
 
 public class ValidationException extends RuntimeException {
     public ValidationException(String message) {

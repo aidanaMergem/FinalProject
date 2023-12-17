@@ -1,4 +1,4 @@
-﻿package com.ead.finalproject.exception;
+package com.ead.finalproject.exception;
 
 public class ResourceNotFoundException extends RuntimeException{
     private String resourceName;
