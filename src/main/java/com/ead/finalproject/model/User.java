@@ -24,8 +24,6 @@ public class User {
     private String firstName;
     private String lastName;
 
-    @OneToMany(mappedBy = "user")
-    private Set<Booking> bookings;
 
 
     private Set<Role> roles;

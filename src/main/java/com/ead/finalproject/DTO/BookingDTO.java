@@ -1,11 +1,30 @@
 package com.ead.finalproject.DTO;
 
-import lombok.AllArgsConstructor;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class BookingDTO {
+
+    @NotNull
+    private Long userId;
+
+    @NotNull
+    private Long tourId;
+
+    @Min(1)
+    private int numberOfPeople;
+
+    // Assuming BookingStatus is a string, adjust accordingly if it's an enum
+    @NotNull
+    private String bookingStatus;
+
+    @NotNull
+    private LocalDateTime bookingDateTime;
+
+
+
 }

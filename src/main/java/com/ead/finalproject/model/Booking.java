@@ -19,15 +19,20 @@ public class Booking {
     private long id;
 
     @ManyToOne
-    @JoinColumn(name = "tour_id")
-    private Tour tour;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id")  // Ensure "user_id" matches the actual ID field in the User entity
+    @JoinColumn(name = "user_login", nullable = false)
     private User user;
 
-    private LocalDateTime bookingDateTime;
-    private int numberOfPersons;
+
+    @ManyToOne
+    @JoinColumn(name = "tour_id", nullable = false)
+    private Tour tour;
+
+
+    private int numberOfPeople;
+
+    @Enumerated(EnumType.STRING)
     private BookingStatus bookingStatus;
+    private LocalDateTime bookingDateTime;
+
 
 }
